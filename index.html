@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/data.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <title>MAIL IPUSM</title>
+  </head>
+  <body>
+    <div class="page-container">
+      <nav class="top-nav">
+        <ul class="nav-menu-ul">
+          <li class="nav-menu-li side-menu-btn">
+            <img
+              id="side-menu-btn"
+              class="side-menu-btn"
+              src="/assets/images/menu-btn-closed.png"
+              alt="side-menu-btn"
+            />
+          </li>
+          <li class="nav-menu-li app-logo link-element">
+            <img
+              class="logo-icon"
+              src="/assets/images/logo-icon.png"
+              alt="app-logo"
+            />
+            <img
+              class="logo-text"
+              src="/assets/images/logo-text.png"
+              alt="app-logo"
+            />
+          </li>
+
+          <li class="nav-menu-li search-area">
+            <div class="search-input">
+              <img
+                class="search-icon"
+                src="/assets/images/search.png"
+                alt="search"
+              />
+              <input
+                class="nav-menu-search"
+                type="text"
+                placeholder="Search here ..."
+              />
+            </div>
+          </li>
+
+          <li class="nav-menu-li nav-icons">
+            <ul id="actions-menu" class="nav-icons-ul">
+              <li class="nav-icons-li link-element">
+                <img id="nav-inbox-icon" alt="action-icon" />
+              </li>
+              <li class="nav-icons-li link-element">
+                <img src="/assets/images/settings-icon.png" alt="action-icon" />
+              </li>
+              <li class="nav-icons-li link-element">
+                <img src="/assets/images/help-icon.png" alt="action-icon" />
+              </li>
+              <li id="user-name" class="nav-actions-li"></li>
+            </ul>
+
+            <ul class="nav-actions-ul">
+              <li class="nav-actions-li menu-icon link-element">
+                <img
+                  id="actions-menu-icon"
+                  src="/assets//images/menu-icon.png"
+                  alt="menu-icon"
+                />
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <div class="content-container">
+        <aside id="side-bar" class="side-bar">
+          <div class="new-mail-container">
+            <button class="new-mail-btn">
+              <img src="/assets/images/new-mail-icon.png" alt="new-mail" />
+              Compose Mail
+            </button>
+          </div>
+          <ul class="mail-boxes">
+            <li id="side-inbox-box" class="side-box">
+              <img src="/assets/images/side-inbox.png" alt="side-icon" />
+              Inbox
+              <span id="mail-box-count" class="hidden-count"></span>
+            </li>
+            <li id="side-starred-box" class="side-box">
+              <img src="/assets/images/side-star.png" alt="side-icon" />
+              Starred
+            </li>
+            <li id="side-sent-box" class="side-box">
+              <img src="/assets/images/side-sent.png" alt="side-icon" />
+              Sent
+            </li>
+          </ul>
+          <hr class="hor-divide" />
+
+          <ul class="mail-boxes">
+            <li class="side-categories">
+              <img src="/assets/images/categories.png" alt="side-icon" />
+              Categories
+            </li>
+            <li class="side-category">Social</li>
+            <li class="side-category">Updates</li>
+            <li class="side-category">Forumes</li>
+            <li class="side-category">Promotions</li>
+          </ul>
+          <hr class="hor-divide" />
+          <ul class="mail-boxes">
+            <li class="side-categories">
+              <img src="/assets/images/trash.png" alt="side-icon" />
+              Trash
+            </li>
+          </ul>
+        </aside>
+        <div class="mail-box-container">
+          <div class="banner">
+            <div id="user-greate-mails-count">
+              <div id="user-greate">
+                <p>
+                  <b>Welcome Back <span id="user-greate-name"></span>,</b>
+                  You have...
+                </p>
+              </div>
+              <div id="user-mails-count">
+                <p>
+                  <b><span id="user-mails-count-number"></span></b> New Mails
+                </p>
+              </div>
+            </div>
+            <img
+              src="/assets/images/banner.png"
+              alt="communicate"
+              class="greate-img"
+            />
+          </div>
+          <div class="mails-area">
+            <div class="mails-area-filters">
+              <div class="selection-actions">
+                <input type="checkbox" id="select-all-mails" />
+
+                <img
+                  id="filters-forward-icon"
+                  class="filters-forward-icon"
+                  src="/assets/images/forward.png"
+                  alt="forward-icon"
+                />
+                <img
+                  id="filters-reply-icon"
+                  class="filters-reply-icon"
+                  src="/assets/images/reply.png"
+                  alt="reply-icon"
+                />
+                <img
+                  src="/assets/images/hor-menu-icon.png"
+                  alt="selection-menu"
+                />
+              </div>
+
+              <div class="arrange-actions">
+                <div class="sort-by">
+                  <p>Sort by</p>
+                  <img src="/assets/images/arrow-down.png" alt="arrow-down" />
+                </div>
+                <div class="arrange-by">
+                  <img src="/assets//images/arrange-by.png" alt="arrange" />
+                  <img src="/assets/images/arrange-another.png" alt="arrange" />
+                </div>
+              </div>
+            </div>
+            <div id="mails-list-container" class="mail-list-titles">
+              <div id="mails-list" class="mails-list"></div>
+              <div id="mail-content" class="mail-content"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/app.js"></script>
+  </body>
+</html>
