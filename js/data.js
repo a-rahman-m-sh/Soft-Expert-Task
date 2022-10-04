@@ -8,7 +8,7 @@ let emailsData = {
         date: "23-1-2022",
         mail: "marc.john@email.com",
         time: "19:05 AM",
-        attachment: "/assets/images/attach.png",
+        attachment: "assets/images/attach.png",
         isRead: false,
       },
       {
@@ -29,7 +29,7 @@ let emailsData = {
         date: "22-1-2022",
         mail: "bank.bank@email.com",
         time: "19:05 AM",
-        attachment: "/assets/images/attach.png",
+        attachment: "assets/images/attach.png",
         isRead: true,
       },
 
