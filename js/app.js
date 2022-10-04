@@ -9,14 +9,14 @@ let openedMail;
 let inboxMails = emailsData.inbox.emails;
 let navInboxIcon = document.getElementById("nav-inbox-icon");
 unreadCount > 0
-  ? navInboxIcon.setAttribute("src", "/assets/images/inbox-icon-filled.png")
-  : navInboxIcon.setAttribute("src", "/assets/images/inbox-icon.png");
+  ? navInboxIcon.setAttribute("src", "assets/images/inbox-icon-filled.png")
+  : navInboxIcon.setAttribute("src", "assets/images/inbox-icon.png");
 //check if there is a new mails then show the orange icon
 
 function checkForNewMailBoxes() {
   if (emailsData.inbox.unreadCount > 0) {
     let inboxIcon = document.getElementById("inbox-icon");
-    inboxIcon.setAttribute("src", "/assets/images/inbox-icon-filled.png");
+    inboxIcon.setAttribute("src", "assets/images/inbox-icon-filled.png");
   }
 }
 
@@ -65,7 +65,7 @@ function mailComponentCreator(mail) {
   ]);
 
   let mailFavorite = createElmentWithAttributes("img", "favorite", [
-    { key: "src", value: "/assets/images/star.png" },
+    { key: "src", value: "assets/images/star.png" },
     { key: "alt", value: "star-img" },
   ]);
 
@@ -80,12 +80,12 @@ function mailComponentCreator(mail) {
     "favorite-small"
   );
   let mailFavoriteSmall = createElmentWithAttributes("img", "", [
-    { key: "src", value: "/assets/images/star.png" },
+    { key: "src", value: "assets/images/star.png" },
     { key: "alt", value: "star-img" },
   ]);
 
   let mailReadLabel = createElmentWithAttributes("img", "active-mail", [
-    { key: "src", value: "/assets/images/activee-mail.png" },
+    { key: "src", value: "assets/images/activee-mail.png" },
     {
       key: "alt",
       value: "point-img",
@@ -201,17 +201,17 @@ function showEmailContentHandler(mailId, id) {
   );
 
   let mailTitlePrint = createElmentWithAttributes("img", "", [
-    { key: "src", value: "/assets/images/print.png" },
+    { key: "src", value: "assets/images/print.png" },
     { key: "alt", value: "print-img" },
   ]);
 
   let mailTitleDownload = createElmentWithAttributes("img", "", [
-    { key: "src", value: "/assets/images/download.png" },
+    { key: "src", value: "assets/images/download.png" },
     { key: "alt", value: "download-img" },
   ]);
 
   let mailTitleClose = createElmentWithAttributes("img", "", [
-    { key: "src", value: "/assets/images/close.png" },
+    { key: "src", value: "assets/images/close.png" },
     { key: "alt", value: "close-img" },
   ]);
 
@@ -237,15 +237,15 @@ function showEmailContentHandler(mailId, id) {
   );
 
   let mailConForward = createElmentWithAttributes("img", "", [
-    { key: "src", value: "/assets/images/forward.png" },
+    { key: "src", value: "assets/images/forward.png" },
     { key: "alt", value: "forward-img" },
   ]);
   let mailConReply = createElmentWithAttributes("img", "", [
-    { key: "src", value: "/assets/images/reply.png" },
+    { key: "src", value: "assets/images/reply.png" },
     { key: "alt", value: "reply-img" },
   ]);
   let mailConMenu = createElmentWithAttributes("img", "", [
-    { key: "src", value: "/assets/images/hor-menu-icon.png" },
+    { key: "src", value: "assets/images/hor-menu-icon.png" },
     { key: "alt", value: "menu-img" },
   ]);
 
@@ -343,10 +343,10 @@ function toggleSideMenuHandler() {
   let sideBar = document.getElementById("side-bar");
   if (!sideBar.classList.contains("sid-bar-show")) {
     sideBar.classList.add("sid-bar-show");
-    sideMenuBtn.setAttribute("src", "/assets/images/menu-btn-opened.png");
+    sideMenuBtn.setAttribute("src", "assets/images/menu-btn-opened.png");
   } else {
     sideBar.classList.remove("sid-bar-show");
-    sideMenuBtn.setAttribute("src", "/assets/images/menu-btn-closed.png");
+    sideMenuBtn.setAttribute("src", "assets/images/menu-btn-closed.png");
   }
 }
 
